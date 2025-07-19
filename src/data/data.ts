@@ -264,17 +264,17 @@ const categories: ICategory[] = [
       {
         id: 401,
         name: 'Bộ lọc trong Cabin',
-        image: '/boloctrongcabin.png',
+        image: '/boloccabin.png',
       },
       {
         id: 402,
         name: 'Bộ lọc trong Cabin',
-        image: '/boloctrongcabin.png',
+        image: '/boloccabin.png',
       },
       {
         id: 403,
         name: 'Bộ lọc trong Cabin',
-        image: '/boloctrongcabin.png',
+        image: '/boloccabin.png',
       },
     ],
   },
