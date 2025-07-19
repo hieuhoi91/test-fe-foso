@@ -35,9 +35,9 @@ const CategoryMenu: React.FC<CategoryMenuProps> = ({
         <BsList className="text-white text-2xl" />
         <span>Danh mục sản phẩm</span>
         {showMenu ? (
-          <MdKeyboardArrowDown className="text-white text-2xl ml-2" />
-        ) : (
           <MdKeyboardArrowUp className="text-white text-2xl ml-2" />
+        ) : (
+          <MdKeyboardArrowDown className="text-white text-2xl ml-2" />
         )}
       </button>
 
@@ -48,7 +48,9 @@ const CategoryMenu: React.FC<CategoryMenuProps> = ({
               <div
                 key={category.id}
                 className={`relative h-16 hover:bg-gray-50 ${
-                  activeCategory.id === category.id ? 'bg-gray-50' : ''
+                  activeCategory.id === category.id
+                    ? 'bg-gray-50 border-l-2 border-blue-700'
+                    : ''
                 }`}
                 onMouseEnter={() => setActiveCategory(category)}
               >
@@ -67,7 +69,11 @@ const CategoryMenu: React.FC<CategoryMenuProps> = ({
                       />
                     </div>
                   )}
-                  <span className="text-gray-700 text-sm flex-1">
+                  <span
+                    className={`text-sm flex-1 font-medium ${
+                      activeCategory.id === category.id ? 'text-blue-700' : ''
+                    }`}
+                  >
                     {category.name}
                   </span>
                   <MdKeyboardArrowRight className="text-gray-400" />
